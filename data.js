@@ -1,0 +1,58 @@
+// Sample workshops shown on the site. Dates, prices and seat counts are placeholders
+// until each studio confirms them.
+// cover: {img, q} uses one quarter of a 2x2 photo collage (q: 0 top-left, 1 top-right,
+// 2 bottom-left, 3 bottom-right); {img, pos} sets the crop directly; {color} is a plain
+// colour cover (index into COVER_COLORS in app.js).
+window.SEED_WORKSHOPS = [
+  { id: "satee-mug", studio: "Satee.ceramic", title: "Smiley mug hand-building", cat: "Pottery",
+    date: "2026-11-21", time: "10:00", hrs: 3, seats: 8, price: 1400, place: "Satee.ceramic studio",
+    desc: "Pinch and shape your own mug, then paint smileys, bunnies or cow spots. The studio glazes and fires it, ready in 3–4 weeks.",
+    cover: { img: "img/satee.webp", q: 1 } },
+  { id: "satee-pizza", studio: "Satee.ceramic", title: "Pizza plate painting", cat: "Pottery",
+    date: "2026-11-22", time: "13:30", hrs: 2, seats: 10, price: 1100, place: "Satee.ceramic studio",
+    desc: "Paint four pizza-slice plates with your own toppings. The studio glazes and fires them for you.",
+    cover: { img: "img/satee.webp", q: 3 } },
+  { id: "satee-vase", studio: "Satee.ceramic", title: "Bunny bud vase", cat: "Pottery",
+    date: "2026-11-28", time: "10:00", hrs: 2.5, seats: 6, price: 1200, place: "Satee.ceramic studio",
+    desc: "Hand-build a little animal vase with ears, faces and rosy cheeks. Take a dried-flower bunch home on the day.",
+    cover: { img: "img/satee.webp", q: 2 } },
+
+  { id: "cf-scarf", studio: "Cotton Farm Showroom", title: "Indigo tie-dye scarf", cat: "Textiles",
+    date: "2026-11-21", time: "13:30", hrs: 2, seats: 12, price: 850, place: "Cotton Farm Showroom",
+    desc: "Fold, tie and dip a cotton scarf in natural indigo. Rinse it, hang it to dry in the garden and take it home the same day.",
+    cover: { img: "img/cottonfarm.webp", q: 0 } },
+  { id: "cf-garden", studio: "Cotton Farm Showroom", title: "Shibori dyeing in the garden", cat: "Textiles",
+    date: "2026-11-22", time: "10:00", hrs: 3, seats: 8, price: 1200, place: "Cotton Farm Showroom",
+    desc: "Learn several shibori folding and binding patterns at the garden tables, then dye a larger cloth to take home.",
+    cover: { img: "img/cottonfarm.webp", q: 1 } },
+  { id: "cf-group", studio: "Cotton Farm Showroom", title: "Group tie-dye afternoon", cat: "Textiles",
+    date: "2026-11-29", time: "14:00", hrs: 2.5, seats: 15, price: 750, place: "Cotton Farm Showroom",
+    desc: "A relaxed indigo session for friends, teams and families. Everyone dyes their own cloth and we finish with a group photo on the lawn.",
+    cover: { img: "img/cottonfarm.webp", pos: "50% 100%" } },
+
+  { id: "lanla-dye", studio: "Lanla.indigo", title: "Indigo tie-dye cloth", cat: "Textiles",
+    date: "2026-11-21", time: "13:30", hrs: 2, seats: 10, price: 890, place: "Lanla.indigo garden studio",
+    desc: "Learn folding and tying patterns, dip your cloth in indigo, then rinse and dry it in the garden. Take it home the same day.",
+    cover: { color: 0 } },
+  { id: "lanla-paint", studio: "Lanla.indigo", title: "Canvas painting in the garden", cat: "Painting",
+    date: "2026-11-22", time: "10:00", hrs: 2, seats: 8, price: 790, place: "Lanla.indigo garden studio",
+    desc: "Paint sunflowers, koi or your own scene in the wooden painting room. Paints, brushes and canvas included.",
+    cover: { color: 4 } },
+  { id: "lanla-beads", studio: "Lanla.indigo", title: "Bead bracelet making", cat: "Jewelry",
+    date: "2026-11-29", time: "10:00", hrs: 1, seats: 12, price: 690, place: "Lanla.indigo garden studio",
+    desc: "Choose from trays of colourful beads and string a bracelet or keychain. Good for kids and families.",
+    cover: { color: 3 } },
+
+  { id: "mae-wall", studio: "Mae Macrame Decor", title: "Macrame wall hanging", cat: "Textiles",
+    date: "2026-11-23", time: "10:00", hrs: 3, seats: 8, price: 1290, place: "Mae Macrame Decor studio",
+    desc: "Learn the basic macrame knots and tie your own wall hanging on a wooden rod. Cord and rod included.",
+    cover: { color: 4 } },
+  { id: "mae-mini", studio: "Mae Macrame Decor", title: "Mini macrame for beginners", cat: "Textiles",
+    date: "2026-11-28", time: "14:00", hrs: 1.5, seats: 10, price: 590, place: "Mae Macrame Decor studio",
+    desc: "A short first class for kids, teens and families: make a small hanging or keychain to take home.",
+    cover: { color: 5 } },
+  { id: "mae-bag", studio: "Mae Macrame Decor", title: "Macrame bucket bag", cat: "Textiles",
+    date: "2026-11-29", time: "13:00", hrs: 4, seats: 6, price: 1690, place: "Mae Macrame Decor studio",
+    desc: "Knot a drawstring bucket bag in your choice of cord colour, with small flower details if you like.",
+    cover: { color: 2 } }
+];
