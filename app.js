@@ -2,7 +2,7 @@
   "use strict";
 
   const FEE = 0.10;                 // platform fee taken from the host's payout
-  const STORE = "localhands.v1";    // localStorage key (demo: data stays in this browser)
+  const STORE = "localvibe.v1";    // localStorage key (demo: data stays in this browser)
   const POS = ["0% 0%", "100% 0%", "0% 100%", "100% 100%"];          // square boxes
   const POS_WIDE = ["0% 15%", "100% 15%", "0% 85%", "100% 85%"];    // landscape boxes: centre the quarter, skip the title text
   const CATS = [["All", "apps"], ["Pottery", "emoji_food_beverage"], ["Painting", "palette"], ["Textiles", "checkroom"], ["Jewelry", "diamond"], ["Cooking", "restaurant"], ["Other", "interests"]];
@@ -120,7 +120,7 @@
           <div class="checks">
             <div class="ok"><span class="ms">check_circle</span>All materials included</div>
             <div class="ok"><span class="ms">event_available</span>Free cancellation up to 24 hours before</div>
-            <div class="ok"><span class="ms">verified_user</span>Paid through Local Hands, released to the host after the class</div>
+            <div class="ok"><span class="ms">verified_user</span>Paid through Local Vibe, released to the host after the class</div>
           </div>
         </div>
         <aside class="panel" aria-label="Book this workshop">
@@ -246,12 +246,12 @@
     const h = decodeURIComponent(location.hash.slice(1));
     const ae = document.activeElement; const fid = ae && ae.id && view.contains(ae) ? ae.id : null;
     let sel = null; try { sel = fid ? [ae.selectionStart, ae.selectionEnd] : null; } catch (e) {}
-    let html, nav = "explore", title = "Local Hands";
-    if (h.startsWith("w-")) { const w = find(h.slice(2)); html = vDetail(h.slice(2)); if (w) title = w.title + " · Local Hands"; }
-    else if (h.startsWith("book-")) { html = vBook(h.slice(5)); title = "Book · Local Hands"; }
-    else if (h.startsWith("ticket-")) { html = vTicket(h.slice(7)); nav = "bookings"; title = "Your ticket · Local Hands"; }
-    else if (h === "bookings") { html = vBookings(); nav = "bookings"; title = "My bookings · Local Hands"; }
-    else if (h === "host") { html = vHost(); nav = "host"; title = "Host a workshop · Local Hands"; }
+    let html, nav = "explore", title = "Local Vibe";
+    if (h.startsWith("w-")) { const w = find(h.slice(2)); html = vDetail(h.slice(2)); if (w) title = w.title + " · Local Vibe"; }
+    else if (h.startsWith("book-")) { html = vBook(h.slice(5)); title = "Book · Local Vibe"; }
+    else if (h.startsWith("ticket-")) { html = vTicket(h.slice(7)); nav = "bookings"; title = "Your ticket · Local Vibe"; }
+    else if (h === "bookings") { html = vBookings(); nav = "bookings"; title = "My bookings · Local Vibe"; }
+    else if (h === "host") { html = vHost(); nav = "host"; title = "Host a workshop · Local Vibe"; }
     else if (h.startsWith("manage-")) { html = vManage(h.slice(7)); nav = "host"; }
     else html = vExplore();
     view.innerHTML = html;
@@ -307,7 +307,7 @@
       const b = S.book, w = find(b.wid);
       if (b.seats > left(w)) { toast("Those seats were just taken. Choose fewer seats."); b.step = 1; render(); return; }
       const id = rid("b");
-      DB.bookings.push({ id, wid: w.id, name: b.name.trim(), email: b.email.trim(), phone: b.phone.trim(), note: b.note.trim(), seats: b.seats, total: b.seats * w.price, pay: b.pay, code: "LH-" + id.slice(-5).toUpperCase(), at: new Date().toISOString() });
+      DB.bookings.push({ id, wid: w.id, name: b.name.trim(), email: b.email.trim(), phone: b.phone.trim(), note: b.note.trim(), seats: b.seats, total: b.seats * w.price, pay: b.pay, code: "LV-" + id.slice(-5).toUpperCase(), at: new Date().toISOString() });
       if (save()) { S.book = null; go("#ticket-" + id); toast("Booked. Your ticket is ready."); } else DB.bookings.pop();
     }
     else if (a === "confirm") { S.confirm = v || null; render(); }

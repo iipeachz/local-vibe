@@ -1,4 +1,4 @@
-# Local Hands
+# Local Vibe
 
 A demo website for booking hands-on craft workshops with local studios, and for hosting your own.
 
