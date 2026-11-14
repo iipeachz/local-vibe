@@ -2,7 +2,7 @@
 
 A demo website for booking hands-on craft workshops with local studios, and for hosting your own.
 
-- **Workshops**: browse classes from Satee.ceramic, Cotton Farm Showroom, Lanla.indigo and Mae Macrame Decor, filter by date, category or studio.
+- **Workshops**: browse classes from Satee.ceramic and Cotton Farm Showroom, filter by date, category or studio.
 - **Booking**: choose seats, enter your details, pick card or PromptPay, and get a ticket with a door code.
 - **Host**: list a workshop with date, seats, price and cover. The dashboard shows bookings and your payout after the 10% platform fee.
 
